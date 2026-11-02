@@ -1,0 +1,17 @@
+temp,temp_degC,test,file,capacity_Ah,T_mean
+n20degC,-20,C/20 discharge,607_C20DisCh.csv,2.492,-19.8
+n20degC,-20,1C discharge,610_Cap_1C.csv,1.671,-17.1
+n20degC,-20,1C discharge,611_Cap_1C.csv,1.617,-17.3
+n10degC,-10,C/20 discharge,593_C20DisCh.csv,2.561,-10.1
+n10degC,-10,1C discharge,596_Cap_1C.csv,2.263,-7.9
+n10degC,-10,1C discharge,602_Cap_1C.csv,2.232,-8.1
+0degC,0,C/20 discharge,585_C20DisCh.csv,2.596,-0.6
+0degC,0,1C discharge,589_Cap_1C.csv,2.473,0.9
+10degC,10,C/20 discharge,575_C20DisCh.csv,2.646,9.1
+10degC,10,1C discharge,571_Cap_1C.csv,2.485,1.2
+10degC,10,1C discharge,576_Cap_1C.csv,2.547,10.1
+25degC,25,C/20 discharge,549_C20DisCh.csv,2.778,23.9
+25degC,25,1C discharge,551_Cap_1C.csv,2.726,24.6
+25degC,25,1C discharge,552_Cap_1C.csv,2.693,24.6
+40degC,40,C/20 discharge,555_C20DisCh.csv,2.687,38.5
+40degC,40,1C discharge,557_Cap_1C.csv,2.5,5.0

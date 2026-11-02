@@ -1,0 +1,297 @@
+{
+  "package_version": "1.0.0",
+  "C_REF_AH": 2.78,
+  "n_train_cycles": 40,
+  "n_test_cycles": 22,
+  "n_train_samples": 261003,
+  "features": [
+    "V",
+    "I",
+    "T",
+    "V_avg_10",
+    "I_avg_10",
+    "V_avg_60",
+    "I_avg_60",
+    "V_avg_300",
+    "I_avg_300",
+    "V_avg_900",
+    "I_avg_900"
+  ],
+  "realistic_conditions": {
+    "soc0_error": -0.1,
+    "current_offset_A": 0.05,
+    "current_gain": 1.02
+  },
+  "ecm": {
+    "n20degC": {
+      "R0": 0.093548171786761,
+      "R1": 0.09665375260854098,
+      "tau": 38.89545745621003,
+      "C1": 402.4205621248995,
+      "fit_rms_mV": 85.5708545366366,
+      "fit_cycle": "Mixed1",
+      "fit_temp_C": -18.316489525909592,
+      "ocv_table_temp_C": -19.8
+    },
+    "n10degC": {
+      "R0": 0.05655930053798144,
+      "R1": 0.07587012973680465,
+      "tau": 59.145998296415236,
+      "C1": 779.5689621408868,
+      "fit_rms_mV": 62.10454241985853,
+      "fit_cycle": "Mixed1",
+      "fit_temp_C": -8.889369211114658,
+      "ocv_table_temp_C": -10.1
+    },
+    "0degC": {
+      "R0": 0.03843352500148082,
+      "R1": 0.050460976069361875,
+      "tau": 53.455918302973046,
+      "C1": 1059.3516508577723,
+      "fit_rms_mV": 31.600663087947492,
+      "fit_cycle": "Mixed1",
+      "fit_temp_C": 0.24906848908037438,
+      "ocv_table_temp_C": -0.6
+    },
+    "10degC": {
+      "R0": 0.027930523809159197,
+      "R1": 0.036769327567799916,
+      "tau": 45.45363969501802,
+      "C1": 1236.1835992568772,
+      "fit_rms_mV": 17.122519692105033,
+      "fit_cycle": "Mixed1",
+      "fit_temp_C": 9.735387805889673,
+      "ocv_table_temp_C": 9.1
+    },
+    "25degC": {
+      "R0": 0.019422778503980723,
+      "R1": 0.019536000985462806,
+      "tau": 26.503440994337954,
+      "C1": 1356.6461741100331,
+      "fit_rms_mV": 12.769700552872342,
+      "fit_cycle": "Mixed1",
+      "fit_temp_C": 24.211349216625663,
+      "ocv_table_temp_C": 23.9
+    },
+    "40degC": {
+      "R0": 0.017034496799986146,
+      "R1": 0.014206091598026226,
+      "tau": 21.469772822251787,
+      "C1": 1511.30750313019,
+      "fit_rms_mV": 10.105225810362157,
+      "fit_cycle": "Mixed1",
+      "fit_temp_C": 38.788563843907625,
+      "ocv_table_temp_C": 38.5
+    }
+  },
+  "overall": {
+    "Coulomb counting (ideal)": {
+      "rmse": 0.057,
+      "mae": 0.05,
+      "max_abs": 0.1,
+      "rmse_after_15min": 0.063,
+      "max_abs_after_15min": 0.1,
+      "rmse_median": 0.04
+    },
+    "Coulomb counting (realistic)": {
+      "rmse": 9.07,
+      "mae": 9.022,
+      "max_abs": 10.093,
+      "rmse_after_15min": 8.987,
+      "max_abs_after_15min": 9.935,
+      "rmse_median": 9.469
+    },
+    "OCV lookup": {
+      "rmse": 17.329,
+      "mae": 13.799,
+      "max_abs": 54.578,
+      "rmse_after_15min": 15.941,
+      "max_abs_after_15min": 46.005,
+      "rmse_median": 14.445
+    },
+    "EKF": {
+      "rmse": 0.931,
+      "mae": 0.843,
+      "max_abs": 1.5,
+      "rmse_after_15min": 0.96,
+      "max_abs_after_15min": 1.5,
+      "rmse_median": 0.853
+    },
+    "Gradient Boosting": {
+      "rmse": 2.065,
+      "mae": 1.574,
+      "max_abs": 7.328,
+      "rmse_after_15min": 2.039,
+      "max_abs_after_15min": 6.9,
+      "rmse_median": 1.608
+    },
+    "Neural Network": {
+      "rmse": 1.074,
+      "mae": 0.826,
+      "max_abs": 3.845,
+      "rmse_after_15min": 0.872,
+      "max_abs_after_15min": 2.925,
+      "rmse_median": 0.874
+    }
+  },
+  "rmse_by_temperature": {
+    "Coulomb counting (ideal)": {
+      "n20degC": 0.053,
+      "n10degC": 0.054,
+      "0degC": 0.069,
+      "10degC": 0.05,
+      "25degC": 0.047,
+      "40degC": 0.068
+    },
+    "Coulomb counting (realistic)": {
+      "n20degC": 9.477,
+      "n10degC": 9.221,
+      "0degC": 9.093,
+      "10degC": 9.047,
+      "25degC": 8.592,
+      "40degC": 8.865
+    },
+    "OCV lookup": {
+      "n20degC": 33.383,
+      "n10degC": 22.799,
+      "0degC": 16.225,
+      "10degC": 12.959,
+      "25degC": 8.281,
+      "40degC": 6.971
+    },
+    "EKF": {
+      "n20degC": 1.307,
+      "n10degC": 1.313,
+      "0degC": 0.935,
+      "10degC": 0.68,
+      "25degC": 0.762,
+      "40degC": 0.482
+    },
+    "Gradient Boosting": {
+      "n20degC": 3.292,
+      "n10degC": 3.309,
+      "0degC": 2.157,
+      "10degC": 1.458,
+      "25degC": 0.958,
+      "40degC": 0.789
+    },
+    "Neural Network": {
+      "n20degC": 1.733,
+      "n10degC": 1.71,
+      "0degC": 0.901,
+      "10degC": 0.647,
+      "25degC": 0.578,
+      "40degC": 0.646
+    }
+  },
+  "ekf_all": {
+    "settle_median_s": 0.0,
+    "settle_max_s": 0.0,
+    "max_abs_after_15min": 2.803953241700674
+  },
+  "ekf_warm_10_to_40C": {
+    "settle_median_s": 0.0,
+    "settle_max_s": 0.0,
+    "rmse": 0.6256970878759949,
+    "max_abs_after_15min": 1.6152076780706681
+  },
+  "ekf_cold_below_0C": {
+    "rmse": 1.3100415901134412,
+    "rmse_min": 0.4797890629875548,
+    "rmse_max": 2.08025131335289,
+    "max_abs_after_15min": 2.803953241700674
+  },
+  "ml_fit_seconds": {
+    "Gradient Boosting": 6.3,
+    "Neural Network": 22.1
+  },
+  "ocv_source_used": "C/20 discharge",
+  "ocv_source_comparison_train_rmse": {
+    "pulse-test rest voltage": 2.735,
+    "C/20 discharge": 1.053,
+    "C/20 charge": 6.227,
+    "C/20 average": 2.527
+  },
+  "ocv_source_comparison_train_rmse_by_temp": {
+    "pulse-test rest voltage": {
+      "-20": 7.528,
+      "-10": 2.606,
+      "0": 1.83,
+      "10": 1.561,
+      "25": 0.498,
+      "40": 0.424
+    },
+    "C/20 discharge": {
+      "-20": 1.991,
+      "-10": 1.56,
+      "0": 0.814,
+      "10": 0.509,
+      "25": 0.484,
+      "40": 0.583
+    },
+    "C/20 charge": {
+      "-20": 20.696,
+      "-10": 4.235,
+      "0": 2.552,
+      "10": 1.056,
+      "25": 2.387,
+      "40": 1.53
+    },
+    "C/20 average": {
+      "-20": 6.768,
+      "-10": 2.463,
+      "0": 1.698,
+      "10": 1.321,
+      "25": 0.633,
+      "40": 0.613
+    }
+  },
+  "ocv_source_comparison_train_bias_by_temp": {
+    "pulse-test rest voltage": {
+      "-20": -6.418,
+      "-10": -1.693,
+      "0": -1.308,
+      "10": -1.207,
+      "25": -0.046,
+      "40": 0.215
+    },
+    "C/20 discharge": {
+      "-20": 0.348,
+      "-10": 1.323,
+      "0": 0.322,
+      "10": 0.277,
+      "25": 0.426,
+      "40": 0.565
+    },
+    "C/20 charge": {
+      "-20": -19.2,
+      "-10": -2.069,
+      "0": -1.079,
+      "10": -0.227,
+      "25": -1.551,
+      "40": -1.234
+    },
+    "C/20 average": {
+      "-20": -4.529,
+      "-10": 1.67,
+      "0": -0.242,
+      "10": -0.593,
+      "25": 0.018,
+      "40": -0.202
+    }
+  },
+  "n_ocv_selection_cycles": 34,
+  "effective_resistance_n20degC_mOhm": {
+    "at_1A": 259.5,
+    "at_6A": 123.2
+  },
+  "worst_single_error_after_15min": {
+    "Coulomb counting (ideal)": 0.265,
+    "Coulomb counting (realistic)": 10.567,
+    "EKF": 2.804,
+    "Gradient Boosting": 24.732,
+    "Neural Network": 7.136,
+    "OCV lookup": 72.509
+  },
+  "runtime_s": 129.7
+}
